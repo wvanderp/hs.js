@@ -4,8 +4,8 @@ class Player{
 
         this.wapon = "";
 
-        this.deck = "";
-        this.hand = "";
-        this.field = "";
+        this.deck = new Zone();
+        this.hand = new Zone();
+        this.field = new Zone();
     }
 }
