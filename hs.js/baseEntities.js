@@ -1,21 +1,41 @@
 const CARDTYPES = {
-    "heroPowers": "heroPowers",
-    "minions": "minions",
-    "spells": "spells",
-    "secrets": "secrets",
-    "weapons": "weapons",
+    "heroPower": "heroPower",
+    "minion": "minion",
+    "spell": "spell",
+    "secret": "secret",
+    "weapon": "weapon",
     "none": "none"
 };
 
 const CHARACTERCLASS = {
-    "Druid": "Druid",
-    "Hunter": "Hunter",
-    "Mage": "Mage",
-    "Paladin": "Paladin",
-    "Priest": "Priest",
-    "Rogue": "Rogue",
-    "Shaman":"Shaman",
-    "Warlock": "Warlock",
-    "Warrior": "Warrior",
+    "druid": "Druid",
+    "hunter": "Hunter",
+    "mage": "Mage",
+    "paladin": "Paladin",
+    "priest": "Priest",
+    "rogue": "Rogue",
+    "shaman":"Shaman",
+    "warlock": "Warlock",
+    "warrior": "Warrior",
+    "all": "all"
+};
+
+const rarity = {
+    "free": "Free",
+    "common": "Common",
+    "rare": "Rare",
+    "epic": "Epic",
+    "legendary": "Legendary"
+};
+
+const race  = {
+    "beast": "Beast",
+    "demon": "Demon",
+    "dragon": "Dragon",
+    "mech": "Mech",
+    "murloc": "Murloc",
+    "pirate": "Pirate",
+    "totem": "Totem",
     "none": "none"
+
 };
