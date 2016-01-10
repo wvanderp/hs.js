@@ -1,3 +1,5 @@
+"use strict";
+
 const CARDTYPES = {
     "heroPower": "heroPower",
     "minion": "minion",

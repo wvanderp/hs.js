@@ -1,3 +1,5 @@
+"use strict";
+
 class Player{
     constructor(){
         this.health = 30;

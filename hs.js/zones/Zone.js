@@ -1,14 +1,12 @@
+"use strict";
+
 class Zone{
     constructor(){
-		this.contents = new array();
+		this.contents = new Array();
 		this.maxSlots = 0;
     }
 
     isFull(){
-        if(this.contents.length >= this.maxSlots){
-            return true;
-        }else{
-            return false;
-        }
+        return this.contents.length >= this.maxSlots;
     }
 }

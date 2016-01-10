@@ -1,3 +1,5 @@
+"use strict";
+
 class Deck extends Zone{
     constructor(){
         this.contents = new this.contents();

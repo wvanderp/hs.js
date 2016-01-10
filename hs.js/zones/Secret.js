@@ -1,6 +1,8 @@
+"use strict";
+
 class Secret extends Zone{
     constructor(){
-        this.contents = new array();
+        this.contents = new Array();
         this.maxSlots = 5;
     }
 }
