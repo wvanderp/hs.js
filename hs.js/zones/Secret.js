@@ -1,8 +1,11 @@
 "use strict";
 
-class Secret extends Zone{
+import {Zone} from "./Zone.js";
+
+export class Secret extends Zone{
     constructor(){
-        this.contents = new Array();
+        super();
+        this.contents = [];//array
         this.maxSlots = 5;
     }
 }

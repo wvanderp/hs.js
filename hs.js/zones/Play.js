@@ -1,8 +1,11 @@
 "use strict";
 
-class Play extends Zone{
+import {Zone} from "./Zone.js";
+
+export class Play extends Zone{
     constructor(){
-        this.contents = new Array();
+        super();
+        this.contents = [];//array
         this.maxSlots = 7;
     }
 }

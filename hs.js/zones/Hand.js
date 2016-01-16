@@ -1,8 +1,11 @@
 "use strict";
 
-class Hand extends Zone{
+import {Zone} from "./Zone.js";
+
+export class Hand extends Zone{
     constructor(){
-        this.contents = new Array();
+        super();
+        this.contents = [];//array
         this.maxSlots = 10;
     }
 }

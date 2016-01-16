@@ -1,6 +1,6 @@
 "use strict";
 
-const CARDTYPES = {
+export const CARDTYPES = {
     "heroPower": "heroPower",
     "minion": "minion",
     "spell": "spell",
@@ -9,7 +9,7 @@ const CARDTYPES = {
     "none": "none"
 };
 
-const CHARACTERCLASS = {
+export const CHARACTERCLASS = {
     "druid": "Druid",
     "hunter": "Hunter",
     "mage": "Mage",
@@ -22,7 +22,7 @@ const CHARACTERCLASS = {
     "all": "all"
 };
 
-const rarity = {
+export const rarity = {
     "free": "Free",
     "common": "Common",
     "rare": "Rare",
@@ -30,7 +30,7 @@ const rarity = {
     "legendary": "Legendary"
 };
 
-const race  = {
+export const race  = {
     "beast": "Beast",
     "demon": "Demon",
     "dragon": "Dragon",

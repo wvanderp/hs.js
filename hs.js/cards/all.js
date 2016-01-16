@@ -1,4 +1,8 @@
-class CS2_172 extends Card{
+"use strict";
+import {Card} from "./card.js"
+import {CARDTYPES, CHARACTERCLASS, rarity, race} from "../baseEntities.js"
+
+export class CS2_172 extends Card{
     constructor(){
         super();
         this.name = "Bloodfen Raptor";
@@ -15,7 +19,7 @@ class CS2_172 extends Card{
 	}
 }
 
-class CS2_182 extends Card{
+export class CS2_182 extends Card{
     constructor(){
         super();
         this.name = "Chillwind Yeti";
@@ -32,7 +36,7 @@ class CS2_182 extends Card{
     }
 }
 
-class CS2_147 extends Card{
+export class CS2_147 extends Card{
     constructor(){
         super();
         this.name = "Gnomish Inventor";

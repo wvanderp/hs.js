@@ -1,18 +1,7 @@
 "use strict";
+import {CARDTYPES, CHARACTERCLASS, rarity, race} from "../baseEntities.js"
 
-require("./all.js");
-require("./Druid.js");
-require("./Hunter.js");
-require("./Mage.js");
-require("./Paladin.js");
-require("./Priest.js");
-require("./Rogue.js");
-require("./Shaman.js");
-require("./Warlock.js");
-require("./Warrior.js");
-
-
-class Card{
+export class Card{
     constructor(){
         this.name = "";
         this.type = CARDTYPES.none;
@@ -40,5 +29,5 @@ class Card{
     onDeathrattle(){};
 
 
-}
+};
 	

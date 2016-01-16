@@ -1,8 +1,11 @@
 "use strict";
 
-class Graveyard extends Zone{
+import {Zone} from "./Zone.js";
+
+export class Graveyard extends Zone{
     constructor(){
-        this.contents = new Array();
+        super();
+        this.contents = [];//array
         this.maxSlots = 0;
     }
 }
