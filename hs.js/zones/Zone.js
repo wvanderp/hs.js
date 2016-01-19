@@ -14,6 +14,22 @@ export class Zone{
         this.contents.push(card);
     }
 
+    getCard(i) {
+        if (i < this.contents.length){
+            return this.contents[i]
+        }else{
+            throw "Array out of bounds";
+        }
+    }
+
+    removeCard(i) {
+        if (i < this.contents.length){
+            return this.contents.splice(i,1);
+        }else{
+            throw "Array out of bounds";
+        }
+    }
+
     print(){
         if (this.contents.length == 0){
             console.log("empty");

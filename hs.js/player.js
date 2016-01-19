@@ -12,9 +12,13 @@ import {SetAside} from "./zones/SetAside.js";
 export class Player{
     constructor(){
         this.health = 30;
+        this.attack = 0;
+        this.armor = 0;
 
-        this.wapon = "";
-        this.heroPower = "";
+        this.spellDamage = 0;
+
+        this.wapon = null;
+        this.heroPower = null;
 
         this.deck = new Deck();
         this.hand = new Hand();
@@ -28,7 +32,11 @@ export class Player{
 
 
     draw(){
-        this.hand.addCard(this.deck.contents[0]);
-        this.deck.contents.splice(0,1);
+        if (!this.hand.isFull()) {
+            this.hand.addCard(this.deck.getCard(0));
+        }else{
+            this.removed.addCard(this.deck.getCard(0))
+        }
+        this.deck.removeCard(0);
     }
 }
