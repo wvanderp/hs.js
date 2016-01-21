@@ -5,7 +5,8 @@ var should = require("should");
 import {Deck} from "./hs.js/zones/Deck.js";
 import {Hand} from "./hs.js/zones/Hand.js";
 
-import {Player} from "./hs.js/Player.js";
+import {Player} from "./hs.js/player.js";
+import {Game} from  "./hs.js/game.js";
 
 import {CS2_172, CS2_182, CS2_147} from "./hs.js/cards/all.js";
 
@@ -32,9 +33,19 @@ describe('Deck', function() {
         //everyday i'm shuffling
         it('should be different when shuffled', function () {
             var deck = new Deck();
+
+            deck.addCard(new CS2_172());
+            deck.addCard(new CS2_182());
+            deck.addCard(new CS2_172());
+            deck.addCard(new CS2_147());
+
             var oldDeck = deck;
 
             deck.shuffle();
+
+            deck.print();
+            console.log();
+            oldDeck.print();
 
             deck.contents.should.notEqual(oldDeck.contents);
         });
@@ -113,3 +124,22 @@ describe('player', function() {
     });
 });
 
+describe('game', function () {
+    describe('#next turn', function () {
+        it('should switch user when told to', function(){
+            var game = new Game();
+
+            game.nextTurn();
+
+            game.currentPlayerNum.should.equal(2)
+        });
+
+        it('should switch twich when told to', function(){
+            var game = new Game();
+
+            game.nextTurn();
+            game.nextTurn();
+            game.currentPlayerNum.should.equal(1)
+        })
+    });
+});

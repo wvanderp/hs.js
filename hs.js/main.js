@@ -8,27 +8,8 @@ var deck = game.player1.deck;
 var hand = game.player1.hand;
 
 deck.addCard(new CS2_172());
-deck.addCard(new CS2_182());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_172());
-deck.addCard(new CS2_147());
 
-for(var i = 0; i < 14; i++){
-    game.player1.draw();
-}
-
-
+game.currentPlayer.deck.print();
 
 
 

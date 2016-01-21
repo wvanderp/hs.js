@@ -16,6 +16,6 @@ export class CS2_017 extends Card{
     }
 
     onSpawn(){
-
+        currentPcurrentPlayer.attack = currentPcurrentPlayer.attack + 1;
     }
 }
