@@ -1,11 +1,12 @@
 "use strict";
 
 export const CARDTYPES = {
-    "heroPower": "heroPower",
+    "hero_power": "hero_power",
     "minion": "minion",
     "spell": "spell",
-    "secret": "secret",
+    "enchantment": "enchantment",
     "weapon": "weapon",
+    "hero": "hero",
     "none": "none"
 };
 
@@ -23,6 +24,7 @@ export const CHARACTERCLASS = {
 };
 
 export const rarity = {
+    "unknown": "Unknown",
     "free": "Free",
     "common": "Common",
     "rare": "Rare",
@@ -34,7 +36,7 @@ export const race  = {
     "beast": "Beast",
     "demon": "Demon",
     "dragon": "Dragon",
-    "mech": "Mech",
+    "mechanical": "mechanical",
     "murloc": "Murloc",
     "pirate": "Pirate",
     "totem": "Totem",
