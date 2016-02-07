@@ -2,9 +2,9 @@
 
 import {Zone} from "./Zone.js";
 
-export class Deck extends Zone{
-    constructor(){
-		super();
+export class Deck extends Zone {
+    constructor() {
+        super();
         this.contents = [];
         this.maxSlots = 60;
     }

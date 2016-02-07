@@ -1,41 +1,41 @@
 "use strict";
 
-export class Zone{
-    constructor(){
-		this.contents = [];//array
-		this.maxSlots = 0;
+export class Zone {
+    constructor() {
+        this.contents = [];//array
+        this.maxSlots = 0;
     }
 
-    isFull(){
+    isFull() {
         return this.contents.length >= this.maxSlots;
     }
 
-    addCard(card){
+    addCard(card) {
         this.contents.push(card);
     }
 
     getCard(i) {
-        if (i < this.contents.length){
+        if (i < this.contents.length) {
             return this.contents[i]
-        }else{
+        } else {
             throw "Array out of bounds";
         }
     }
 
     removeCard(i) {
-        if (i < this.contents.length){
-            return this.contents.splice(i,1);
-        }else{
+        if (i < this.contents.length) {
+            return this.contents.splice(i, 1);
+        } else {
             throw "Array out of bounds";
         }
     }
 
-    print(){
-        if (this.contents.length == 0){
+    print() {
+        if (this.contents.length == 0) {
             console.log("empty");
             return;
         }
-        for(var i = 0, len = this.contents.length; i < len; i++){
+        for (var i = 0, len = this.contents.length; i < len; i++) {
             console.log(this.contents[i].name);
         }
     }

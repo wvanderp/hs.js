@@ -2,8 +2,8 @@
 
 import {Zone} from "./Zone.js";
 
-export class Removed extends Zone{
-    constructor(){
+export class Removed extends Zone {
+    constructor() {
         super();
         this.contents = [];//array
         this.maxSlots = 0;

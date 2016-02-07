@@ -4,7 +4,7 @@ var json = require("./AllSets.json");
 
 
 //reimplement replace for more than one instance in a string
-String.prototype.replaceAll = function(search, replacement) {
+String.prototype.replaceAll = function (search, replacement) {
     var target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
 };
@@ -15,21 +15,21 @@ var toWrite = "";
 toWrite += "import {Card} from \"../../hs.js/cards/card.js\" \n" +
     "import {CARDTYPES, CHARACTERCLASS, rarity, race} from \"../../hs.js/baseEntities.js\"\n\n";
 
-for(var i = 0; i < _.size(json);i++){
+for (var i = 0; i < _.size(json); i++) {
     toWrite += makeClass(json[i]) + "\n\n";
-    console.log(i+"/"+(_.size(json)-1));
+    console.log(i + "/" + (_.size(json) - 1));
 
 }
 
 fs.writeFile("out.js", toWrite);
 
-function makeClass(card){
+function makeClass(card) {
     var c = "";
     var br = "\n";
     //id
     c += makeRow("export class %%here%% extends Card{", card["id"], 0);
-    c += "\tconstructor(){"+br;
-    c += "\t\tsuper();"+br;
+    c += "\tconstructor(){" + br;
+    c += "\t\tsuper();" + br;
 
     //name
     c += makeRow('this.name = "%%here%%";', card["name"], 2);
@@ -89,7 +89,6 @@ function makeClass(card){
     c += "\t}\n";
 
 
-
     //mechanics
     c += makeRow("//%%here%%", JSON.stringify(card["mechanics"]), 1);
 
@@ -104,14 +103,14 @@ function makeClass(card){
     return c;
 }
 
-function makeRow(text, insert, tabs){
-    if (typeof insert == "undefined"){
+function makeRow(text, insert, tabs) {
+    if (typeof insert == "undefined") {
         return "";
     }
 
     // quick and dirty string conversion.
     // for when the insert isn't a string
-    insert = insert+"";
+    insert = insert + "";
 
 
     insert = insert.replaceAll("\n", "\\n");
@@ -121,25 +120,24 @@ function makeRow(text, insert, tabs){
     insert = insert.replaceAll("unknown_6", "unknown");
 
 
-
     text = text.replace("%%here%%", insert);
 
-    for(var i = tabs; i != 0; i--) {
-        text = "\t"+text;
+    for (var i = tabs; i != 0; i--) {
+        text = "\t" + text;
     }
 
-    text = text+"\n";
+    text = text + "\n";
 
     //console.log(text);
     return text;
 }
 
-function toLower(string){
-    if (typeof string == "undefined"){
+function toLower(string) {
+    if (typeof string == "undefined") {
         return undefined;
     }
 
     //string convertion if nessesary
-    string = string+"";
+    string = string + "";
     return string.toLowerCase();
 }

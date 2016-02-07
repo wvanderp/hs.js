@@ -10,7 +10,7 @@ import {Game} from  "./hs.js/game.js";
 
 import {CS2_172, CS2_182, CS2_147} from "./hs.js/cards/all.js";
 
-describe('Deck', function() {
+describe('Deck', function () {
     describe('#numbers', function () {
         it('should initiate empty', function () {
             var deck = new Deck();
@@ -52,7 +52,7 @@ describe('Deck', function() {
     });
 });
 
-describe('hand', function() {
+describe('hand', function () {
     describe('#numbers', function () {
         it('should initiate empty', function () {
             var hand = new Hand();
@@ -72,7 +72,7 @@ describe('hand', function() {
     });
 });
 
-describe('player', function() {
+describe('player', function () {
     describe('#drawing', function () {
         it('a card should go from deck to hand', function () {
             var player = new Player();
@@ -109,11 +109,11 @@ describe('player', function() {
             var removed = player.removed;
 
 
-            for(var j = 0; j < 20; j++){
+            for (var j = 0; j < 20; j++) {
                 deck.addCard(new CS2_147());
             }
 
-            for(var i = 0; i < 14; i++){
+            for (var i = 0; i < 14; i++) {
                 player.draw();
             }
 
@@ -126,7 +126,7 @@ describe('player', function() {
 
 describe('game', function () {
     describe('#next turn', function () {
-        it('should switch user when told to', function(){
+        it('should switch user when told to', function () {
             var game = new Game();
 
             game.nextTurn();
@@ -134,7 +134,7 @@ describe('game', function () {
             game.currentPlayerNum.should.equal(2)
         });
 
-        it('should switch twich when told to', function(){
+        it('should switch twich when told to', function () {
             var game = new Game();
 
             game.nextTurn();

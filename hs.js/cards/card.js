@@ -1,8 +1,8 @@
 "use strict";
 import {CARDTYPES, CHARACTERCLASS, rarity, race} from "../baseEntities.js"
 
-export class Card{
-    constructor(){
+export class Card {
+    constructor() {
         this.name = "";
         this.type = CARDTYPES.none;
         this.characterClass = CHARACTERCLASS.none;
@@ -35,14 +35,18 @@ export class Card{
         this.silenced = false;
 
 
-
         this.race = null;
         this.faction = null;
     }
 
-    onBattlecry(){};
-    onCarddraw(){};
-    onDeathrattle(){};
+    onBattlecry() {
+    };
+
+    onCarddraw() {
+    };
+
+    onDeathrattle() {
+    };
 
 
 }

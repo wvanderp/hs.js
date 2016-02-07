@@ -9,8 +9,8 @@ import {Removed} from "./zones/Removed.js";
 import {SetAside} from "./zones/SetAside.js";
 
 
-export class Player{
-    constructor(){
+export class Player {
+    constructor() {
         this.health = 30;
         this.attack = 0;
         this.armor = 0;
@@ -31,10 +31,10 @@ export class Player{
     }
 
 
-    draw(){
+    draw() {
         if (!this.hand.isFull()) {
             this.hand.addCard(this.deck.getCard(0));
-        }else{
+        } else {
             this.removed.addCard(this.deck.getCard(0))
         }
         this.deck.removeCard(0);

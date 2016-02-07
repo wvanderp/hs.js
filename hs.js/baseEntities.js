@@ -17,7 +17,7 @@ export const CHARACTERCLASS = {
     "paladin": "Paladin",
     "priest": "Priest",
     "rogue": "Rogue",
-    "shaman":"Shaman",
+    "shaman": "Shaman",
     "warlock": "Warlock",
     "warrior": "Warrior",
     "all": "all"
@@ -32,7 +32,7 @@ export const rarity = {
     "legendary": "Legendary"
 };
 
-export const race  = {
+export const race = {
     "beast": "Beast",
     "demon": "Demon",
     "dragon": "Dragon",
