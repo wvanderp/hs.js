@@ -123,7 +123,7 @@ function makeRow(text, insert, tabs) {
     text = text.replace("%%here%%", insert);
 
     for (var i = tabs; i != 0; i--) {
-        text = "\t" + text;
+        text = "    " + text;
     }
 
     text = text + "\n";
