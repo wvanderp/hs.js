@@ -31,13 +31,18 @@ function makeClass(card) {
     c += "\tconstructor(){" + br;
     c += "\t\tsuper();" + br;
 
+    //id
+    c += makeRow('this.id = "%%here%%";', card["id"], 2);
+
     //name
     c += makeRow('this.name = "%%here%%";', card["name"], 2);
+
     //type
     c += makeRow("this.type = CARDTYPES.%%here%%;", toLower(card["type"]), 2);
 
     //text
     c += makeRow("this.text = \"%%here%%\";", card["text"], 2);
+
     //set
     c += makeRow("this.set = \"%%here%%\";", card["set"], 2);
 

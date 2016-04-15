@@ -39,15 +39,20 @@ describe('Deck', function () {
             deck.addCard(new CS2_172());
             deck.addCard(new CS2_147());
 
-            var oldDeck = deck;
+            var oldDeck = new Deck();
+
+            oldDeck.addCard(new CS2_172());
+            oldDeck.addCard(new CS2_182());
+            oldDeck.addCard(new CS2_172());
+            oldDeck.addCard(new CS2_147());
 
             deck.shuffle();
 
-            deck.print();
-            console.log();
-            oldDeck.print();
+            //deck.print();
+            //console.log();
+            //oldDeck.print();
 
-            deck.contents.should.notEqual(oldDeck.contents);
+            deck.contents.should.not.equal(oldDeck.contents);
         });
     });
 });
@@ -141,5 +146,21 @@ describe('game', function () {
             game.nextTurn();
             game.currentPlayerNum.should.equal(1)
         })
+    });
+});
+
+describe('card', function () {
+    describe('#toString', function () {
+        it('should give the corect string when asked', function () {
+            var card = new CS2_172();
+            var string = card.toString();
+
+            string.should.equal("id: CS2_172\n"+
+                "name: Bloodfen Raptor\n"+
+                "attack: 3\n"+
+                "health: 2\n"+
+                "text: \n"
+            );
+        });
     });
 });

@@ -31,12 +31,18 @@ export class Zone {
     }
 
     print() {
+        console.log(this.valueOf());
+    }
+
+    valueOf(){
         if (this.contents.length == 0) {
-            console.log("empty");
-            return;
+            return "empty";
         }
+
+        var out = "";
         for (var i = 0, len = this.contents.length; i < len; i++) {
-            console.log(this.contents[i].name);
+            out += this.contents[i].name;
         }
+        return out;
     }
 }

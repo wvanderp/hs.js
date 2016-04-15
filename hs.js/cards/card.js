@@ -48,6 +48,24 @@ export class Card {
     onDeathrattle() {
     };
 
+    valueOf(){
+        var out = "";
+        out += "id: " + this.id + "\n";
+        out += "name: " + this.name + "\n";
 
+        if (typeof this.attack != "undefined"){
+            out += "attack: " + this.attack + "\n";
+        }
+
+        if (typeof this.health != "undefined"){
+            out += "health: " + this.health + "\n";
+        }
+
+        if (typeof this.text != "undefined"){
+            out += "text: " + this.text + "\n";
+        }
+
+        return out;
+    }
 }
 	
