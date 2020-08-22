@@ -1,16 +1,16 @@
-"use strict";
+import Zone from './Zone';
 
-import {Zone} from "./Zone.js";
-
-export class Deck extends Zone {
+export default class Deck extends Zone {
     constructor() {
         super();
         this.contents = [];
         this.maxSlots = 60;
     }
 
-    shuffle() {
-        var counter = this.contents.length, temp, index;
+    shuffle() : void {
+        let counter = this.contents.length;
+        let temporary;
+        let index;
 
         // While there are elements in the this.contents
         while (counter > 0) {
@@ -21,9 +21,9 @@ export class Deck extends Zone {
             counter--;
 
             // And swap the last element with it
-            temp = this.contents[counter];
+            temporary = this.contents[counter];
             this.contents[counter] = this.contents[index];
-            this.contents[index] = temp;
+            this.contents[index] = temporary;
         }
     }
 }

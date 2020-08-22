@@ -1,11 +1,8 @@
 {
   "name": "hs.js",
   "version": "0.0.1",
-  "description": "a hearthstone simulator written in js",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha --compilers js:babel-core/register"
-  },
+  "description": "An hearthstone simulator written in js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://wvanderp@github.com/wvanderp/hs.js.git"
@@ -16,12 +13,34 @@
     "url": "https://github.com/wvanderp/hs.js/issues"
   },
   "homepage": "https://github.com/wvanderp/hs.js#readme",
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "@types/mocha": "^8.0.3",
+    "@types/chai": "^4.2.12",
+    "@types/ramda": "^0.27.14",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-typescript": "^2.2.1",
+    "eslint-nibble": "^6.0.0",
+    "eslint-plugin-compat": "^3.8.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-ramda": "^2.5.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "eslint-plugin-chai-expect": "^2.2.0",
+    "typescript": "^3.9.7",
+    "ts-node": "^8.10.2",
+    "mocha": "^8.1.1",
+    "chai": "^4.2.0"
+  },
   "dependencies": {
-    "babel": "^6.5.0",
-    "babel-core": "^6.5.0",
-    "babel-preset-es2015": "^6.5.0",
-    "lodash": "^4.2.1",
-    "mocha": "^2.4.5",
-    "should": "^8.2.1"
+    "json-fn": "^1.1.1",
+    "ramda": "^0.27.1"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.ts",
+    "generateCards": "ts-node utils/makeAll/convert.ts"
   }
 }

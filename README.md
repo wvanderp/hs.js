@@ -1,2 +1,2 @@
 # hs.js
-a hearthstone simulator written in js
+An hearthstone simulator written in ts
