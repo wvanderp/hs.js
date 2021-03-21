@@ -38,8 +38,8 @@ export default class Zone {
         }
 
         let out = '';
-        for (let i = 0, length_ = this.contents.length; i < length_; i++) {
-            out += this.contents[i].name;
+        for (let index = 0, length_ = this.contents.length; index < length_; index++) {
+            out += this.contents[index].name;
         }
         return out;
     }

@@ -22,4 +22,4 @@ export default interface Card {
     onDeathrattle(): void;
 
     valueOf(): string;
-};
+}

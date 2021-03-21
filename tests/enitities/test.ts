@@ -115,11 +115,11 @@ describe('player', function () {
             const {hand} = player;
             const {removed} = player;
 
-            for (let j = 0; j < 20; j++) {
+            for (let index = 0; index < 20; index++) {
                 deck.addCard(cards.CS2_147);
             }
 
-            for (let i = 0; i < 14; i++) {
+            for (let index = 0; index < 14; index++) {
                 player.draw();
             }
 
@@ -152,6 +152,5 @@ describe('game', function () {
 });
 
 describe('card', function () {
-    describe('#toString', function () {
-    });
+    describe('#toString', function () {});
 });

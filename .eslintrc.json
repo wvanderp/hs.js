@@ -120,7 +120,7 @@
       "error",
       {
         "replacements": {
-          "q" : {
+          "q": {
             "query": true
           },
           "props": {
@@ -129,6 +129,7 @@
         }
       }
     ],
-    "no-await-in-loop": "off"
+    "no-await-in-loop": "off",
+    "semi": "off"
   }
 }

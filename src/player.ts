@@ -70,24 +70,24 @@ export default class Player {
 
     playCard(locator: CardLocator, target: Zone): void {
         switch (locator.card.type) {
+            case CARDTYPES.GAME_MODE_BUTTON:
+                break;
             case CARDTYPES.HERO_POWER:
+                break;
+            case CARDTYPES.HERO:
                 break;
             case CARDTYPES.MINION:
                 target.addCard(locator.card);
                 locator.removeCard();
                 break;
-            case CARDTYPES.SPELL:
-                break;
-            case CARDTYPES.ENCHANTMENT:
-                break;
-            case CARDTYPES.HERO:
-                break;
-            case CARDTYPES.GAME_MODE_BUTTON:
-                break;
             case CARDTYPES.MOVE_MINION_HOVER_TARGET:
+                break;
+            case CARDTYPES.SPELL:
                 break;
             case CARDTYPES.WEAPON:
                 this.weapon = locator.card;
+                break;
+            default: break;
         }
     }
 }

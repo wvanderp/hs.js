@@ -67,16 +67,13 @@ const cards = R.map(
         faction: Faction[card.faction],
 
         // eslint-disable-next-line @typescript-eslint/no-empty-function
-        onBattlecry: (): void => {
-        },
+        onBattlecry: (): void => {},
 
         // eslint-disable-next-line @typescript-eslint/no-empty-function
-        onCarddraw: (): void => {
-        },
+        onCarddraw: (): void => {},
 
         // eslint-disable-next-line @typescript-eslint/no-empty-function
-        onDeathrattle: () => {
-        },
+        onDeathrattle: () => {},
 
         valueOf(): string {
             return this.id;
